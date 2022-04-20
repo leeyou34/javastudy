@@ -1,24 +1,14 @@
 import java.util.Scanner;
 
-public class AccountingMethodApp {
-	// this part is field.
+class Accounting {
+	
+	// field 부분
 	public static double vatRate;
 	public static double valueOfSupply;
 	public static double expenseRate;
 	
-	
-
-	public static void main(String [] args) {
-	
-		System.out.println("In order to find out Accounting status, please input the \"value of supply\"");
-		Scanner sc = new Scanner(System.in);
-		
-		valueOfSupply = sc.nextDouble();
-		vatRate = 0.1;
-		expenseRate = 0.3;
-		print();
-	}
-	public static void print() {
+	// method 부분
+	public static void print() { // print method 안에 어떤 동작들을 할 것인지 정리 되어있다.
 		
 		double vat = getVAT();
 		double total = getTotal();
@@ -41,7 +31,7 @@ public class AccountingMethodApp {
 		
 	}
 
-	public static double getDividend3() {
+	public static double getDividend3() { // 프린트 메소드 내에 있는 메소드들을 정리했다.
 		return getIncome() * 0.2;
 	}
 
@@ -70,3 +60,20 @@ public class AccountingMethodApp {
 		return valueOfSupply * vatRate;
 	}
 }
+	
+
+public class AccountingClassApp {
+
+	
+	public static void main(String [] args) { // 메인 메소드에선 동작만 할 수 있는 것들을 간략하게 정리 했다.
+	
+		System.out.println("In order to find out Accounting status, please input the \"value of supply\"");
+		Scanner sc = new Scanner(System.in);
+		
+		Accounting.valueOfSupply = sc.nextDouble();
+		Accounting.vatRate = 0.1;
+		Accounting.expenseRate = 0.3;
+		Accounting.print();
+	}
+}
+
