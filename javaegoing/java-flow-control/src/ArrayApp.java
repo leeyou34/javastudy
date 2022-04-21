@@ -13,6 +13,11 @@ public class ArrayApp {
 		users[2] = "youbin";
 		
 		System.out.println(users[1]);
+		System.out.println("The \'user\' variable has " +users.length+" data value in array");
+		
+		int [] scores = { 10, 100, 100};
+		System.out.println(scores[1]);
+		System.out.println(scores.length);
 
 	}
 
