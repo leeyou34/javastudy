@@ -86,17 +86,57 @@ public class baekjoon {
 //}
 
 
-	public static void main(String[] args) {
+//	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		
+//		int y = sc.nextInt();
+//		
+//		int result = y-543;
+//		
+//		if( 1000<= y && y <= 3000) {
+//			System.out.println(result);
+//		} else {
+//			System.out.println("you saw the wrong numerical value on the screen");
+//		}
+//	}
+//}
+
+	
+	public static void main(String[]args) {
 		Scanner sc = new Scanner(System.in);
 		
-		int y = sc.nextInt();
 		
-		int result = y-543;
+		int A = sc.nextInt();
+		int B = sc.nextInt();
+		int C = sc.nextInt();
 		
-		if( 1000<= y && y <= 3000) {
-			System.out.println(result);
-		} else {
-			System.out.println("you saw the wrong numerical value on the screen");
+		int result1 = (A+B)%C;
+		int result2 = ((A%C) + (B%C))%C;
+		
+		int result3 = (A*B)%C;
+		int result4 = ((A%C) * (B%C))%C;
+		
+		if(2<= A && A<= 10000) {
+			if (2<= B && B<= 10000) {
+				if (2<= C && C<= 10000) {
+					
+					System.out.println(result1);
+
+					System.out.println(result2);
+
+					System.out.println(result3);
+
+					System.out.println(result4);
+					
+//					if(result1 == result2) {
+//						System.out.println(result1 == result2);
+//					}
+//					
+//					if(result3 == result4) {
+//						System.out.println(result3 == result4);
+//					}
+				}
+			}
 		}
 	}
 }
